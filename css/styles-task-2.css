@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Tahoma';
+    src: url("../source/fonts/Tahoma.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.4;
+    font-family: 'Tahoma', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    background: #ffffff;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto;
+    clear: both;
+}
+button:active, button:focus, .slide:active {
+    outline: none;
+}
+h1, h2 {
+    text-align: center;
+    letter-spacing: 1px;
+}
+h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.5em;
+}
+aside {
+    width: 250px;
+    padding-top: calc(100% - 554px);
+    background: lightblue;
+}
