@@ -4,12 +4,20 @@
     font-weight: 300;
     font-style: normal;
 }
+@font-face {
+    font-family: 'BauhousC Light';
+    src: url("../source/fonts/BauhausC-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
 * {
+    margin: 0;
+    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 14px;
-    color: #000000;
+    font-size: 12px;
+    color: #333333;
     line-height: 1.4;
     font-family: 'Tahoma', sans-serif;
 }
@@ -17,30 +25,96 @@
 html, body {
     width: 100%;
     background: #ffffff;
+    height: 100%;
 }
 
 .wrapper {
     width: 100%;
-    max-width: 1280px;
-    margin: 50px auto;
-    clear: both;
+    min-height: 100%;
+    position: relative;
 }
-button:active, button:focus, .slide:active {
-    outline: none;
+.wrapper-inner {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
 }
-h1, h2 {
-    text-align: center;
+
+h1, h2, h3 {
     letter-spacing: 1px;
+    color: #212121;
 }
 h1 {
     font-size: 2em;
-    text-transform: uppercase;
 }
 h2 {
     font-size: 1.5em;
 }
+h3 {
+
+}
 aside {
-    width: 250px;
-    padding-top: calc(100% - 554px);
-    background: lightblue;
+    width: 233px;
+    float: right;
+}
+main {
+    margin-right: 283px;
+}
+
+/* header */
+header[role='banner'] .wrapper-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.logo {
+    font-family: 'BauhousC Light', sans-serif;
+    font-size: 4em;
+    color: #24b5e1;
+    text-decoration: none;
+}
+.phone-number {
+    font-size: 1.416666666666667em;
+    color: #000000;
+    text-decoration: none;
+    line-height: 1;
+}
+.phone-number:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 28px;
+    background: transparent url('../source/design/icon-phone.png') no-repeat 0 0;
+    margin-right: 8px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+    margin-top: -6px;
+}
+.phone-number:hover:before {
+    margin-right: 5px;
+}
+.phone-number:hover {
+    font-weight: 600;
+}
+
+/* nav */
+nav {
+    background: #f2f2f2;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+
+    color: #393939;
 }

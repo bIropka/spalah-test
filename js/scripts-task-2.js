@@ -1,3 +1,5 @@
-/**
- * Created by bIropka on 19.10.2016.
- */
+$(document).ready(function () {
+
+    
+
+});
