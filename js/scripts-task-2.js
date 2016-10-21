@@ -18,6 +18,16 @@ $(document).ready(function () {
 
     }
 
+    if ($(window).width() > '768') {
+
+        $('aside').insertBefore('main');
+
+    }  else {
+
+        $('aside').insertAfter('main');
+
+    }
+
     $(window).scroll(function() {
 
         if ($(window).width() > '980') {
@@ -31,13 +41,29 @@ $(document).ready(function () {
     });
 
     $(window).resize(function(){
-        if ($(window).width() < '981'){
-            $('.logo').appendTo('nav');
-            $('.phone-number').insertAfter('.logo');
-        } else {
+
+        if ($(window).width() > '980'){
+
             $('.logo').appendTo('header .wrapper-inner');
             $('.phone-number').insertAfter('.logo');
+            
+        } else {
+
+            $('.logo').appendTo('nav');
+            $('.phone-number').insertAfter('.logo');
+
         }
+
+        if ($(window).width() > '768') {
+
+            $('aside').insertBefore('main');
+
+        }  else {
+
+            $('aside').insertAfter('main');
+
+        }
+
     });
 
     $('.fa-bars').click(function() {
